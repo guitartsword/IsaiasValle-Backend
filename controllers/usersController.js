@@ -10,6 +10,9 @@ exports.createUser = {
     handler: function(request, reply) {
       console.log(request.payload);
        var newUser = new user({
+         name : request.payload.name,
+         mail : request.payload.mail,
+         working : request.payload.working,
          username : request.payload.username,
          password : SHA3(request.payload.password),
          scope : request.payload.scope

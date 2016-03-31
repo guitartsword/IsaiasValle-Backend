@@ -14,8 +14,8 @@ server.connection({
               }
 });
 
-mongoose.connect('mongodb://zsnake:password@ds049104.mongolab.com:49104/angular-scaffold');
-
+//mongoose.connect('mongodb://admin:admin@ds023108.mlab.com:23108/facebookjobs');
+mongoose.connect('mongodb://localhost:27017/facebook-jobs');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', function callback() {
